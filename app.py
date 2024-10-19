@@ -7,8 +7,8 @@ app = Flask(__name__)
 # Load the trained LightGBM model
 lgb_model = joblib.load('lgb_model_cropseason.pkl')
 
-# Load the dataset to extract unique values for the form options
-data = pd.read_csv('final_crop_data.csv')  # Assuming the dataset is named 'final_crop_data.csv'
+url='https://drive.google.com/file/d/1_vd4HISZB2h2--CiXKezeWDXHHo2fY23/view?usp=sharing'
+data = pd.read_csv('https://drive.usercontent.google.com/download?id={}&export=download&authuser=0&confirm=t'.format(url.split('/')[-2]))
 
 # Extract unique values for states, districts, crops, and seasons
 unique_states = data['State'].unique()
